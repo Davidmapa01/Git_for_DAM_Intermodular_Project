@@ -1,12 +1,12 @@
 class Deposito {
-  constructor(liquido, litros, ubicacion, fabricacion) {
+  constructor(liquido, litros, ubicacion, fecha_fabricacion) {
     this.liquido = liquido;
     this.litros = litros;
     this.ubicacion = ubicacion;
-    this.fabricacion = fabricacion;
+    this.fecha_fabricacion = fecha_fabricacion; // Se sustituye "fabricacion" por "fecha_fabricacion"
   }
 
-  // Como el ejecicio anterior pero sin mensaje por consola
+  // Función para vaciar cierta cantidad
   Vaciar(cantidad) {
     this.litros -= cantidad;
   }
