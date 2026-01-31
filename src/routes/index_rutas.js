@@ -34,11 +34,64 @@ router.get("/generalPetSitters", (req, res) => {
 });
 
 //  Página de vista previa de cuidadores, se accede cuando el usuario pincha en un cuidador para ver sus características, dirección y opiniones
-router.get("/PreviewPetSitters", (req, res) => {
+router.get("/previewPetSitters", (req, res) => {
     res.send("Página de vista previa de cuidadores de mascotas<br><br>"
         + "Donde aparecen características, dirección y opiniones del cuidador o cuidadora seleccionado<br>"
         + "Aquí se accede cuando el usuario pincha en el nombre/foto de perfil de un cuidador o en la pestaña correspondiente");
 });
+
+
+// 1-Dar de alta a mascota
+router.post("/registerPet", (req, res) => {
+    req.body ="Página para añadir un perfil de mascota";
+    console.log("Mostrando pagina registar mascota", req.body);
+
+    res.json({
+        Title: "Añadiendo datos del registro de mascota",
+    });
+});
+
+// 2-Dar de alta a cuidador de mascotas
+router.post("/registerPetSitter", (req, res) => {
+    req.body ="Página para añadir un perfil de cuidador de mascotas";
+    console.log("Mostrando pagina registar mascota", req.body);
+
+    res.json({
+        Title: "Añadiendo datos del registro de cuidadores",
+    });
+});
+
+
+// 3-Añadir opinión sobre una mascota
+router.post("/reviewPet", (req, res) => {
+    req.body ="Página para subir una opinión sobre una mascota";
+    console.log("Mostrando panel de opiniones", req.body);
+
+    res.json({
+        Title: "Página para subir una opinión sobre una mascota",
+    });
+});
+
+// 4-Añadir opinión sobre un cuidador de mascota
+router.post("/reviewPetSitter", (req, res) => {
+    req.body ="Página para subir una opinión sobre un cuidador de mascota";
+    console.log("Mostrando panel de opiniones", req.body);
+
+    res.json({
+        Title: "Página para subir una opinión sobre un cuidador de mascota",
+    });
+});
+
+// 5-Ajustes de la aplicación
+router.post("/settings", (req, res) => {
+    req.body ="Página para ajustes de la aplicación";
+    console.log("Mostrando ajustes", req.body);
+
+    res.json({
+        Title: "Ajustes",
+    });
+});
+
 
 
 module.exports = router;
